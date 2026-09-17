@@ -1,51 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/</loc>
+    <loc>https://smartutility.pages.dev/</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/merge-pdf</loc>
+    <loc>https://smartutility.pages.dev/merge-pdf</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/split-pdf</loc>
+    <loc>https://smartutility.pages.dev/split-pdf</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/compress-pdf</loc>
+    <loc>https://smartutility.pages.dev/compress-pdf</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/pdf-to-word</loc>
+    <loc>https://smartutility.pages.dev/pdf-to-word</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/pdf-to-excel</loc>
+    <loc>https://smartutility.pages.dev/pdf-to-excel</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/jpg-png-to-pdf</loc>
+    <loc>https://smartutility.pages.dev/jpg-png-to-pdf</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/pdf-to-jpg-png</loc>
+    <loc>https://smartutility.pages.dev/pdf-to-jpg-png</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/excel-to-pdf</loc>
+    <loc>https://smartutility.pages.dev/excel-to-pdf</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/image-to-text</loc>
+    <loc>https://smartutility.pages.dev/image-to-text</loc>
   </url>
 
   <url>
-    <loc>https://YOUR-DOMAIN.com/background-remover</loc>
+    <loc>https://smartutility.pages.dev/background-remover</loc>
   </url>
 
 </urlset>
