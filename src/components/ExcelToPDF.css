@@ -1,0 +1,881 @@
+/* =========================================================
+   EXCEL TO PDF
+========================================================= */
+
+.excel-to-pdf-section {
+  padding: 120px 0 80px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.excel-to-pdf-header {
+  max-width: 850px;
+  margin: 0 auto 45px;
+}
+
+.excel-to-pdf-badge {
+  display: inline-block;
+  padding: 7px 14px;
+  margin-bottom: 16px;
+  border-radius: 30px;
+  background: #e8f1ff;
+  color: #0d6efd;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.excel-to-pdf-header h1 {
+  margin-bottom: 15px;
+  font-size: 44px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.excel-to-pdf-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #667085;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TOOL CONTAINER
+========================================================= */
+
+.excel-to-pdf-tool {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 15px 50px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   UPLOAD
+========================================================= */
+
+.excel-to-pdf-upload {
+  padding: 55px 30px;
+  text-align: center;
+  border: 2px dashed #cbd5e1;
+  border-radius: 18px;
+  background: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.excel-to-pdf-upload:hover,
+.excel-to-pdf-upload-active {
+  border-color: #0d6efd;
+  background: #f2f7ff;
+}
+
+.excel-to-pdf-upload-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #e8f1ff;
+  font-size: 34px;
+}
+
+.excel-to-pdf-upload h2 {
+  margin-bottom: 10px;
+  color: #172033;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.excel-to-pdf-upload p {
+  max-width: 600px;
+  margin: 0 auto 22px;
+  color: #667085;
+  line-height: 1.6;
+}
+
+.excel-to-pdf-browse-btn {
+  border: 0;
+  padding: 12px 25px;
+  border-radius: 10px;
+  background: #0d6efd;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.excel-to-pdf-browse-btn:hover {
+  background: #0b5ed7;
+  transform: translateY(-1px);
+}
+
+.excel-to-pdf-browse-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.excel-to-pdf-upload-note {
+  margin-top: 16px;
+  color: #98a2b3;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.excel-to-pdf-error {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b42318;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FILE
+========================================================= */
+
+.excel-to-pdf-file {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+  padding: 17px;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  background: #f8fafc;
+}
+
+.excel-to-pdf-file-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #e8f1ff;
+  font-size: 24px;
+}
+
+.excel-to-pdf-file-info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.excel-to-pdf-file-info strong {
+  color: #172033;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.excel-to-pdf-file-info span {
+  color: #667085;
+  font-size: 13px;
+}
+
+.excel-to-pdf-remove {
+  border: 0;
+  background: transparent;
+  color: #dc3545;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.excel-to-pdf-remove:hover {
+  text-decoration: underline;
+}
+
+.excel-to-pdf-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   READING
+========================================================= */
+
+.excel-to-pdf-reading {
+  padding: 35px 20px;
+  text-align: center;
+  color: #667085;
+}
+
+.excel-to-pdf-reading .spinner-border {
+  margin-bottom: 15px;
+}
+
+.excel-to-pdf-reading p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.excel-to-pdf-options {
+  margin-top: 28px;
+}
+
+.excel-to-pdf-option-group {
+  margin-bottom: 28px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.excel-to-pdf-option-group h3 {
+  margin-bottom: 7px;
+  color: #172033;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.excel-to-pdf-option-group > p {
+  margin-bottom: 15px;
+  color: #667085;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   OPTION HEADER
+========================================================= */
+
+.excel-to-pdf-option-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.excel-to-pdf-option-header h3 {
+  margin-bottom: 5px;
+}
+
+.excel-to-pdf-option-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.excel-to-pdf-sheet-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.excel-to-pdf-sheet-actions button {
+  border: 1px solid #d0d5dd;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.excel-to-pdf-sheet-actions button:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+
+/* =========================================================
+   SHEETS
+========================================================= */
+
+.excel-to-pdf-sheet-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.excel-to-pdf-sheet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 11px 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #344054;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.excel-to-pdf-sheet:hover {
+  border-color: #b7cdfb;
+  background: #f5f8ff;
+}
+
+.excel-to-pdf-sheet-active {
+  border-color: #0d6efd;
+  background: #f2f7ff;
+}
+
+.excel-to-pdf-sheet input {
+  width: 16px;
+  height: 16px;
+  accent-color: #0d6efd;
+}
+
+.excel-to-pdf-sheet span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PDF SETTINGS
+========================================================= */
+
+.excel-to-pdf-setting {
+  margin-top: 20px;
+}
+
+.excel-to-pdf-setting > label {
+  display: block;
+  margin-bottom: 9px;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.excel-to-pdf-choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.excel-to-pdf-choice {
+  min-width: 110px;
+  padding: 10px 17px;
+  border: 1px solid #d0d5dd;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #344054;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.excel-to-pdf-choice:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+.excel-to-pdf-choice-active {
+  border-color: #0d6efd;
+  background: #eaf2ff;
+  color: #0d6efd;
+}
+
+.excel-to-pdf-choice:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.excel-to-pdf-gridline-option {
+  margin-top: 22px;
+}
+
+.excel-to-pdf-gridline-option label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #344054;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.excel-to-pdf-gridline-option input {
+  width: 17px;
+  height: 17px;
+  accent-color: #0d6efd;
+}
+
+
+/* =========================================================
+   CONVERT BUTTON
+========================================================= */
+
+.excel-to-pdf-button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 11px;
+  background: #0d6efd;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.excel-to-pdf-button:hover:not(:disabled) {
+  background: #0b5ed7;
+  transform: translateY(-1px);
+}
+
+.excel-to-pdf-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.excel-to-pdf-progress {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 13px;
+  background: #f8fafc;
+}
+
+.excel-to-pdf-progress-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 10px;
+  color: #475467;
+  font-size: 14px;
+}
+
+.excel-to-pdf-progress-header strong {
+  color: #0d6efd;
+}
+
+.excel-to-pdf-progress-track {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e2e8f0;
+}
+
+.excel-to-pdf-progress-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: #0d6efd;
+  transition: width 0.25s ease;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.excel-to-pdf-result {
+  margin-top: 30px;
+  padding: 35px 25px;
+  text-align: center;
+  border: 1px solid #d1fae5;
+  border-radius: 17px;
+  background: #f0fdf4;
+}
+
+.excel-to-pdf-success-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.excel-to-pdf-result h2 {
+  margin-bottom: 8px;
+  color: #172033;
+  font-size: 25px;
+}
+
+.excel-to-pdf-result p {
+  margin-bottom: 22px;
+  color: #667085;
+}
+
+.excel-to-pdf-download {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 10px;
+  background: #0d6efd;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.excel-to-pdf-download:hover {
+  background: #0b5ed7;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.excel-to-pdf-start-over {
+  display: block;
+  margin: 15px auto 0;
+  border: 0;
+  background: transparent;
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+.excel-to-pdf-start-over:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   PRIVACY
+========================================================= */
+
+.excel-to-pdf-privacy {
+  max-width: 950px;
+  margin: 25px auto 0;
+}
+
+.excel-to-pdf-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  background: #eff6ff;
+}
+
+.excel-to-pdf-info-icon {
+  flex-shrink: 0;
+  font-size: 23px;
+}
+
+.excel-to-pdf-info-card h3 {
+  margin-bottom: 6px;
+  color: #172033;
+  font-size: 17px;
+}
+
+.excel-to-pdf-info-card p {
+  margin: 0;
+  color: #475467;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.excel-to-pdf-content-section {
+  max-width: 950px;
+  margin: 70px auto 0;
+}
+
+.excel-to-pdf-content-header {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.excel-to-pdf-content-header h2 {
+  margin-bottom: 10px;
+  color: #172033;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.excel-to-pdf-content-header p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   STEPS
+========================================================= */
+
+.excel-to-pdf-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.excel-to-pdf-step {
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.excel-to-pdf-step-number {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e8f1ff;
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+.excel-to-pdf-step h3 {
+  margin-bottom: 9px;
+  color: #172033;
+  font-size: 18px;
+}
+
+.excel-to-pdf-step p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   ARTICLE
+========================================================= */
+
+.excel-to-pdf-light-section {
+  max-width: 950px;
+  margin: 70px auto 0;
+  padding: 35px;
+  border-radius: 17px;
+  background: #ffffff;
+}
+
+.excel-to-pdf-article h2 {
+  margin-bottom: 18px;
+  color: #172033;
+  font-size: 28px;
+}
+
+.excel-to-pdf-article p {
+  margin-bottom: 15px;
+  color: #667085;
+  line-height: 1.8;
+}
+
+.excel-to-pdf-article p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   IMPORTANT
+========================================================= */
+
+.excel-to-pdf-important {
+  padding: 28px;
+  border: 1px solid #fde68a;
+  border-radius: 15px;
+  background: #fffbeb;
+}
+
+.excel-to-pdf-important h2 {
+  margin-bottom: 16px;
+  color: #172033;
+  font-size: 23px;
+}
+
+.excel-to-pdf-important-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.excel-to-pdf-important-list li {
+  margin-bottom: 9px;
+  color: #667085;
+  line-height: 1.65;
+}
+
+.excel-to-pdf-important-list li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.excel-to-pdf-faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.excel-to-pdf-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.excel-to-pdf-faq-list details {
+  padding: 17px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  background: #ffffff;
+}
+
+.excel-to-pdf-faq-list summary {
+  color: #172033;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.excel-to-pdf-faq-list p {
+  margin: 13px 0 0;
+  color: #667085;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+  .excel-to-pdf-section {
+    padding-top: 105px;
+  }
+
+  .excel-to-pdf-header h1 {
+    font-size: 38px;
+  }
+
+  .excel-to-pdf-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .excel-to-pdf-section {
+    padding: 95px 0 60px;
+  }
+
+  .excel-to-pdf-tool {
+    padding: 22px;
+  }
+
+  .excel-to-pdf-header h1 {
+    font-size: 32px;
+  }
+
+  .excel-to-pdf-header p {
+    font-size: 16px;
+  }
+
+  .excel-to-pdf-upload {
+    padding: 40px 20px;
+  }
+
+  .excel-to-pdf-option-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .excel-to-pdf-sheet-list {
+    grid-template-columns: 1fr;
+  }
+
+  .excel-to-pdf-light-section {
+    padding: 25px;
+  }
+
+  .excel-to-pdf-content-section {
+    margin-top: 55px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .excel-to-pdf-section {
+    padding-top: 90px;
+  }
+
+  .excel-to-pdf-header h1 {
+    font-size: 28px;
+  }
+
+  .excel-to-pdf-tool {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .excel-to-pdf-upload {
+    padding: 32px 15px;
+  }
+
+  .excel-to-pdf-upload h2 {
+    font-size: 21px;
+  }
+
+  .excel-to-pdf-file {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .excel-to-pdf-file-info {
+    width: calc(100% - 65px);
+  }
+
+  .excel-to-pdf-remove {
+    width: 100%;
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .excel-to-pdf-option-group {
+    padding: 17px;
+  }
+
+  .excel-to-pdf-choice {
+    min-width: 95px;
+    padding: 9px 12px;
+  }
+
+  .excel-to-pdf-info-card {
+    flex-direction: column;
+  }
+
+  .excel-to-pdf-content-header h2 {
+    font-size: 25px;
+  }
+
+  .excel-to-pdf-light-section {
+    padding: 20px;
+  }
+}

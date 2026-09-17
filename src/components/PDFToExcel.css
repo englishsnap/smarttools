@@ -1,0 +1,863 @@
+.pdf-to-excel-section {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: #f8fafc;
+}
+
+.pdf-to-excel-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pdf-to-excel-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pdf-to-excel-header h1 {
+  margin: 0 0 12px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.pdf-to-excel-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Upload */
+
+.pdf-to-excel-upload {
+  min-height: 330px;
+  padding: 45px 30px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 20px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pdf-to-excel-upload:hover {
+  border-color: #64748b;
+  background: #f8fafc;
+}
+
+.pdf-to-excel-upload-active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  transform: scale(1.01);
+}
+
+.pdf-to-excel-upload-icon {
+  width: 78px;
+  height: 78px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.pdf-to-excel-upload h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.pdf-to-excel-upload p {
+  margin: 0 0 22px;
+  color: #64748b;
+}
+
+.pdf-to-excel-browse-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 24px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pdf-to-excel-browse-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.pdf-to-excel-upload-note {
+  margin-top: 18px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* Error */
+
+.pdf-to-excel-error {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  background: #fef2f2;
+  color: #b91c1c;
+  line-height: 1.5;
+}
+
+/* File */
+
+.pdf-to-excel-file {
+  margin-top: 24px;
+  padding: 18px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pdf-to-excel-file-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.pdf-to-excel-file-info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pdf-to-excel-file-info strong {
+  color: #0f172a;
+  word-break: break-word;
+}
+
+.pdf-to-excel-file-info span {
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+.pdf-to-excel-remove {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 10px;
+  background: #f1f5f9;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 1rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.pdf-to-excel-remove:hover:not(:disabled) {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.pdf-to-excel-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Options */
+
+.pdf-to-excel-options {
+  margin-top: 24px;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.pdf-to-excel-options h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 1.15rem;
+}
+
+.pdf-to-excel-options p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.pdf-to-excel-option-note {
+  margin-top: 15px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+
+.pdf-to-excel-convert,
+.pdf-to-excel-generate-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 22px;
+  border: 0;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.pdf-to-excel-convert:hover:not(:disabled),
+.pdf-to-excel-generate-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.pdf-to-excel-convert:disabled,
+.pdf-to-excel-generate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Progress */
+
+.pdf-to-excel-progress {
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.pdf-to-excel-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.pdf-to-excel-progress-header strong {
+  color: #0f172a;
+}
+
+.pdf-to-excel-progress-header span {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.pdf-to-excel-progress-track {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.pdf-to-excel-progress-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+  transition: width 0.25s ease;
+}
+
+.pdf-to-excel-progress-page {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* Preview */
+
+.pdf-to-excel-preview {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.pdf-to-excel-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.pdf-to-excel-preview-header h3 {
+  margin: 0 0 6px;
+  color: #0f172a;
+}
+
+.pdf-to-excel-preview-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.pdf-to-excel-page-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.pdf-to-excel-page-selector label {
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.pdf-to-excel-page-selector select {
+  min-width: 110px;
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #334155;
+  outline: none;
+}
+
+.pdf-to-excel-page-selector select:focus {
+  border-color: #2563eb;
+}
+
+/* Table */
+
+.pdf-to-excel-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.pdf-to-excel-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.pdf-to-excel-table td {
+  padding: 10px 12px;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  text-align: left;
+  vertical-align: top;
+  white-space: pre-wrap;
+}
+
+.pdf-to-excel-table tr:first-child td {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.pdf-to-excel-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.pdf-to-excel-table td:last-child {
+  border-right: 0;
+}
+
+.pdf-to-excel-preview-note {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.pdf-to-excel-data-summary {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* Generate */
+
+.pdf-to-excel-generate {
+  margin-top: 20px;
+}
+
+.pdf-to-excel-generating-message {
+  margin-top: 10px;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+/* Download */
+
+.pdf-to-excel-download-box {
+  margin-top: 24px;
+  padding: 25px;
+  border: 1px solid #bbf7d0;
+  border-radius: 16px;
+  background: #f0fdf4;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pdf-to-excel-excel-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+}
+
+.pdf-to-excel-download-info {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pdf-to-excel-download-info strong {
+  color: #166534;
+}
+
+.pdf-to-excel-download-info span {
+  color: #64748b;
+  font-size: 0.85rem;
+  word-break: break-word;
+}
+
+.pdf-to-excel-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: #16a34a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pdf-to-excel-download:hover {
+  background: #15803d;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.pdf-to-excel-start-over {
+  width: 100%;
+  padding: 11px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #475569;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pdf-to-excel-start-over:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+/* Privacy */
+
+.pdf-to-excel-privacy {
+  margin-top: 35px;
+}
+
+.pdf-to-excel-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  background: #eff6ff;
+}
+
+.pdf-to-excel-info-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.pdf-to-excel-info-card h3 {
+  margin: 0 0 7px;
+  color: #1e3a8a;
+  font-size: 1.05rem;
+}
+
+.pdf-to-excel-info-card p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+/* Content */
+
+.pdf-to-excel-content-section {
+  margin-top: 65px;
+}
+
+.pdf-to-excel-content-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pdf-to-excel-content-header h2 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 1.9rem;
+}
+
+.pdf-to-excel-content-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Steps */
+
+.pdf-to-excel-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pdf-to-excel-step {
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.pdf-to-excel-step-number {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.pdf-to-excel-step h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 1.08rem;
+}
+
+.pdf-to-excel-step p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+/* Article */
+
+.pdf-to-excel-article {
+  padding: 30px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.pdf-to-excel-article h2 {
+  margin: 0 0 15px;
+  color: #0f172a;
+  font-size: 1.7rem;
+}
+
+.pdf-to-excel-article h3 {
+  margin: 28px 0 10px;
+  color: #0f172a;
+  font-size: 1.25rem;
+}
+
+.pdf-to-excel-article p {
+  margin: 0 0 16px;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* Important Information */
+
+.pdf-to-excel-light-section {
+  padding: 30px;
+  border-radius: 18px;
+  background: #f1f5f9;
+}
+
+.pdf-to-excel-light-section h2 {
+  margin: 0 0 14px;
+  color: #0f172a;
+  font-size: 1.6rem;
+}
+
+.pdf-to-excel-light-section p {
+  margin: 0 0 18px;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.pdf-to-excel-light-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.pdf-to-excel-light-section li {
+  margin-bottom: 10px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* FAQ */
+
+.pdf-to-excel-faq {
+  margin-top: 65px;
+  padding-bottom: 20px;
+}
+
+.pdf-to-excel-faq > h2 {
+  margin: 0 0 25px;
+  text-align: center;
+  color: #0f172a;
+  font-size: 1.9rem;
+}
+
+.pdf-to-excel-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pdf-to-excel-faq-list details {
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.pdf-to-excel-faq-list summary {
+  padding: 18px 20px;
+  cursor: pointer;
+  color: #0f172a;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  padding-right: 45px;
+}
+
+.pdf-to-excel-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.pdf-to-excel-faq-list summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2563eb;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.pdf-to-excel-faq-list details[open] summary::after {
+  content: "−";
+}
+
+.pdf-to-excel-faq-list details p {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .pdf-to-excel-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-to-excel-step {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pdf-to-excel-section {
+    padding: 100px 16px 60px;
+  }
+
+  .pdf-to-excel-header h1 {
+    font-size: 2rem;
+  }
+
+  .pdf-to-excel-header p {
+    font-size: 0.98rem;
+  }
+
+  .pdf-to-excel-upload {
+    min-height: 300px;
+    padding: 35px 20px;
+  }
+
+  .pdf-to-excel-preview-header {
+    flex-direction: column;
+  }
+
+  .pdf-to-excel-page-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pdf-to-excel-page-selector select {
+    flex: 1;
+    max-width: 180px;
+  }
+
+  .pdf-to-excel-info-card {
+    padding: 18px;
+  }
+
+  .pdf-to-excel-content-section {
+    margin-top: 50px;
+  }
+
+  .pdf-to-excel-article,
+  .pdf-to-excel-light-section {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdf-to-excel-section {
+    padding: 90px 12px 50px;
+  }
+
+  .pdf-to-excel-header {
+    margin-bottom: 28px;
+  }
+
+  .pdf-to-excel-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .pdf-to-excel-upload {
+    min-height: 280px;
+    border-radius: 16px;
+  }
+
+  .pdf-to-excel-upload-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 2rem;
+  }
+
+  .pdf-to-excel-file {
+    padding: 14px;
+  }
+
+  .pdf-to-excel-file-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .pdf-to-excel-preview,
+  .pdf-to-excel-options,
+  .pdf-to-excel-progress {
+    padding: 18px;
+  }
+
+  .pdf-to-excel-data-summary {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .pdf-to-excel-download-box {
+    padding: 20px;
+  }
+
+  .pdf-to-excel-download {
+    width: 100%;
+  }
+
+  .pdf-to-excel-content-header h2,
+  .pdf-to-excel-faq > h2 {
+    font-size: 1.6rem;
+  }
+
+  .pdf-to-excel-info-card {
+    flex-direction: column;
+  }
+
+  .pdf-to-excel-step {
+    padding: 20px;
+  }
+}

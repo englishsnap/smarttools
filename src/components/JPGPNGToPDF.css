@@ -1,0 +1,852 @@
+.jpg-png-to-pdf-section {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: #f8fafc;
+}
+
+.jpg-png-to-pdf-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.jpg-png-to-pdf-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.jpg-png-to-pdf-header h1 {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.jpg-png-to-pdf-header p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Upload */
+
+.jpg-png-to-pdf-upload {
+  min-height: 330px;
+  padding: 45px 30px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 20px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.jpg-png-to-pdf-upload:hover {
+  border-color: #64748b;
+  background: #f8fafc;
+}
+
+.jpg-png-to-pdf-upload-active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  transform: scale(1.01);
+}
+
+.jpg-png-to-pdf-upload-icon {
+  width: 78px;
+  height: 78px;
+  margin-bottom: 20px;
+  border-radius: 18px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.jpg-png-to-pdf-upload h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.jpg-png-to-pdf-upload p {
+  margin: 0 0 22px;
+  color: #64748b;
+}
+
+.jpg-png-to-pdf-browse-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 24px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.jpg-png-to-pdf-browse-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.jpg-png-to-pdf-upload-note {
+  margin-top: 18px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* Error */
+
+.jpg-png-to-pdf-error {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  background: #fef2f2;
+  color: #b91c1c;
+  line-height: 1.5;
+}
+
+/* Summary */
+
+.jpg-png-to-pdf-file-summary {
+  margin-top: 24px;
+  padding: 18px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.jpg-png-to-pdf-file-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.jpg-png-to-pdf-file-summary strong {
+  color: #0f172a;
+}
+
+.jpg-png-to-pdf-file-summary span {
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+.jpg-png-to-pdf-clear {
+  padding: 9px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #dc2626;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.jpg-png-to-pdf-clear:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
+.jpg-png-to-pdf-clear:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Image List */
+
+.jpg-png-to-pdf-image-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.jpg-png-to-pdf-image-card {
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.jpg-png-to-pdf-image-number {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.jpg-png-to-pdf-thumbnail {
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.jpg-png-to-pdf-thumbnail img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.jpg-png-to-pdf-image-info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.jpg-png-to-pdf-image-info strong {
+  color: #0f172a;
+  word-break: break-word;
+}
+
+.jpg-png-to-pdf-image-info span {
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.jpg-png-to-pdf-image-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.jpg-png-to-pdf-image-actions button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #475569;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.jpg-png-to-pdf-image-actions button:hover:not(:disabled) {
+  background: #e2e8f0;
+}
+
+.jpg-png-to-pdf-image-actions button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.jpg-png-to-pdf-image-actions .jpg-png-to-pdf-remove {
+  color: #dc2626;
+}
+
+.jpg-png-to-pdf-image-actions
+  .jpg-png-to-pdf-remove:hover:not(:disabled) {
+  background: #fee2e2;
+}
+
+/* Options */
+
+.jpg-png-to-pdf-options {
+  margin-top: 24px;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.jpg-png-to-pdf-options h3 {
+  margin: 0 0 18px;
+  color: #0f172a;
+  font-size: 1.15rem;
+}
+
+.jpg-png-to-pdf-settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.jpg-png-to-pdf-setting {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.jpg-png-to-pdf-setting label {
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.jpg-png-to-pdf-setting select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #334155;
+  outline: none;
+  cursor: pointer;
+}
+
+.jpg-png-to-pdf-setting select:focus {
+  border-color: #2563eb;
+}
+
+.jpg-png-to-pdf-setting select:disabled {
+  background: #f8fafc;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Progress */
+
+.jpg-png-to-pdf-progress {
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.jpg-png-to-pdf-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.jpg-png-to-pdf-progress-header strong {
+  color: #0f172a;
+}
+
+.jpg-png-to-pdf-progress-header span {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.jpg-png-to-pdf-progress-track {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.jpg-png-to-pdf-progress-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+  transition: width 0.25s ease;
+}
+
+.jpg-png-to-pdf-progress-text {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* Convert */
+
+.jpg-png-to-pdf-convert {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 22px;
+  border: 0;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.jpg-png-to-pdf-convert:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.jpg-png-to-pdf-convert:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Download */
+
+.jpg-png-to-pdf-download-box {
+  margin-top: 24px;
+  padding: 25px;
+  border: 1px solid #bbf7d0;
+  border-radius: 16px;
+  background: #f0fdf4;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.jpg-png-to-pdf-pdf-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+}
+
+.jpg-png-to-pdf-download-info {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.jpg-png-to-pdf-download-info strong {
+  color: #166534;
+}
+
+.jpg-png-to-pdf-download-info span {
+  color: #64748b;
+  font-size: 0.85rem;
+  word-break: break-word;
+}
+
+.jpg-png-to-pdf-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: #16a34a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.jpg-png-to-pdf-download:hover {
+  background: #15803d;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.jpg-png-to-pdf-start-over {
+  width: 100%;
+  padding: 11px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #475569;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.jpg-png-to-pdf-start-over:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+/* Privacy */
+
+.jpg-png-to-pdf-privacy {
+  margin-top: 35px;
+}
+
+.jpg-png-to-pdf-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  background: #eff6ff;
+}
+
+.jpg-png-to-pdf-info-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.jpg-png-to-pdf-info-card h3 {
+  margin: 0 0 7px;
+  color: #1e3a8a;
+  font-size: 1.05rem;
+}
+
+.jpg-png-to-pdf-info-card p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+/* Content */
+
+.jpg-png-to-pdf-content-section {
+  margin-top: 65px;
+}
+
+.jpg-png-to-pdf-content-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.jpg-png-to-pdf-content-header h2 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 1.9rem;
+}
+
+.jpg-png-to-pdf-content-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Steps */
+
+.jpg-png-to-pdf-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.jpg-png-to-pdf-step {
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.jpg-png-to-pdf-step-number {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.jpg-png-to-pdf-step h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 1.08rem;
+}
+
+.jpg-png-to-pdf-step p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+/* Article */
+
+.jpg-png-to-pdf-article {
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.jpg-png-to-pdf-article h2 {
+  margin: 0 0 15px;
+  color: #0f172a;
+  font-size: 1.7rem;
+}
+
+.jpg-png-to-pdf-article h3 {
+  margin: 28px 0 10px;
+  color: #0f172a;
+  font-size: 1.25rem;
+}
+
+.jpg-png-to-pdf-article p {
+  margin: 0 0 16px;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* Important Information */
+
+.jpg-png-to-pdf-light-section {
+  padding: 30px;
+  border-radius: 18px;
+  background: #f1f5f9;
+}
+
+.jpg-png-to-pdf-light-section h2 {
+  margin: 0 0 14px;
+  color: #0f172a;
+  font-size: 1.6rem;
+}
+
+.jpg-png-to-pdf-light-section p {
+  margin: 0 0 18px;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.jpg-png-to-pdf-light-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.jpg-png-to-pdf-light-section li {
+  margin-bottom: 10px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* FAQ */
+
+.jpg-png-to-pdf-faq {
+  margin-top: 65px;
+  padding-bottom: 20px;
+}
+
+.jpg-png-to-pdf-faq > h2 {
+  margin: 0 0 25px;
+  text-align: center;
+  color: #0f172a;
+  font-size: 1.9rem;
+}
+
+.jpg-png-to-pdf-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.jpg-png-to-pdf-faq-list details {
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.jpg-png-to-pdf-faq-list summary {
+  position: relative;
+  padding: 18px 45px 18px 20px;
+  cursor: pointer;
+  color: #0f172a;
+  font-weight: 600;
+  list-style: none;
+}
+
+.jpg-png-to-pdf-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.jpg-png-to-pdf-faq-list summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2563eb;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.jpg-png-to-pdf-faq-list
+  details[open]
+  summary::after {
+  content: "−";
+}
+
+.jpg-png-to-pdf-faq-list details p {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .jpg-png-to-pdf-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .jpg-png-to-pdf-section {
+    padding: 100px 16px 60px;
+  }
+
+  .jpg-png-to-pdf-header h1 {
+    font-size: 2rem;
+  }
+
+  .jpg-png-to-pdf-header p {
+    font-size: 0.98rem;
+  }
+
+  .jpg-png-to-pdf-upload {
+    min-height: 300px;
+    padding: 35px 20px;
+  }
+
+  .jpg-png-to-pdf-settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jpg-png-to-pdf-image-card {
+    align-items: flex-start;
+  }
+
+  .jpg-png-to-pdf-image-actions {
+    flex-direction: column;
+  }
+
+  .jpg-png-to-pdf-preview {
+    overflow-x: auto;
+  }
+
+  .jpg-png-to-pdf-info-card {
+    padding: 18px;
+  }
+
+  .jpg-png-to-pdf-content-section {
+    margin-top: 50px;
+  }
+
+  .jpg-png-to-pdf-article,
+  .jpg-png-to-pdf-light-section {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jpg-png-to-pdf-section {
+    padding: 90px 12px 50px;
+  }
+
+  .jpg-png-to-pdf-header {
+    margin-bottom: 28px;
+  }
+
+  .jpg-png-to-pdf-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .jpg-png-to-pdf-upload {
+    min-height: 280px;
+    border-radius: 16px;
+  }
+
+  .jpg-png-to-pdf-upload-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 2rem;
+  }
+
+  .jpg-png-to-pdf-file-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .jpg-png-to-pdf-clear {
+    width: 100%;
+  }
+
+  .jpg-png-to-pdf-image-card {
+    flex-wrap: wrap;
+  }
+
+  .jpg-png-to-pdf-thumbnail {
+    width: 64px;
+    height: 64px;
+  }
+
+  .jpg-png-to-pdf-image-info {
+    width: calc(100% - 120px);
+  }
+
+  .jpg-png-to-pdf-image-actions {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .jpg-png-to-pdf-options,
+  .jpg-png-to-pdf-progress {
+    padding: 18px;
+  }
+
+  .jpg-png-to-pdf-download-box {
+    padding: 20px;
+  }
+
+  .jpg-png-to-pdf-download {
+    width: 100%;
+  }
+
+  .jpg-png-to-pdf-content-header h2,
+  .jpg-png-to-pdf-faq > h2 {
+    font-size: 1.6rem;
+  }
+
+  .jpg-png-to-pdf-info-card {
+    flex-direction: column;
+  }
+
+  .jpg-png-to-pdf-step {
+    padding: 20px;
+  }
+}

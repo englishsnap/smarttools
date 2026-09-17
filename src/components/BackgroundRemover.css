@@ -1,0 +1,794 @@
+.background-remover-section {
+  padding: 120px 0 80px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.background-remover-header {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.background-remover-badge {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #e8f0fe;
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.background-remover-header h1 {
+  margin: 0 0 15px;
+  color: #111827;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.background-remover-header p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* Main Tool */
+
+.background-remover-tool {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.07);
+}
+
+/* Upload */
+
+.background-remover-upload {
+  min-height: 360px;
+  padding: 45px 25px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.background-remover-upload:hover {
+  border-color: #2563eb;
+  background: #f1f5ff;
+}
+
+.background-remover-upload-active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  transform: scale(1.01);
+}
+
+.background-remover-upload-icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: #e8f0fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.background-remover-upload h2 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.background-remover-upload p {
+  margin: 0 0 20px;
+  color: #64748b;
+}
+
+.background-remover-browse-btn {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 22px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.background-remover-browse-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.background-remover-upload-note {
+  margin-top: 18px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* Error */
+
+.background-remover-error {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Workspace */
+
+.background-remover-workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.background-remover-panel {
+  min-width: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.background-remover-panel-header {
+  min-height: 62px;
+  padding: 15px 18px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.background-remover-panel-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.background-remover-remove {
+  border: 0;
+  background: transparent;
+  color: #dc2626;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.background-remover-remove:hover {
+  color: #b91c1c;
+}
+
+.background-remover-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Image Preview */
+
+.background-remover-preview,
+.background-remover-result {
+  min-height: 390px;
+  max-height: 520px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+/* Original image background */
+
+.background-remover-preview {
+  background: #f8fafc;
+}
+
+/* Result checkerboard */
+
+.background-remover-result {
+  background-color: #f8fafc;
+  background-image:
+    linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+    linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+    linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+  background-size: 24px 24px;
+  background-position:
+    0 0,
+    0 12px,
+    12px -12px,
+    -12px 0;
+}
+
+.background-remover-preview img,
+.background-remover-result img {
+  display: block;
+  max-width: 100%;
+  max-height: 470px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.12);
+}
+
+.background-remover-file-info {
+  padding: 14px 18px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.background-remover-file-info strong {
+  color: #334155;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.background-remover-file-info span {
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+/* Empty */
+
+.background-remover-empty {
+  min-height: 390px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.background-remover-empty-icon {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.background-remover-empty h3 {
+  margin: 0 0 9px;
+  color: #334155;
+  font-size: 1.15rem;
+}
+
+.background-remover-empty p {
+  max-width: 330px;
+  margin: 0;
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* Progress */
+
+.background-remover-progress {
+  min-height: 390px;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-remover-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.background-remover-progress-header strong {
+  color: #2563eb;
+}
+
+.background-remover-progress-track {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.background-remover-progress-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+  transition: width 0.25s ease;
+}
+
+.background-remover-progress p {
+  margin: 14px 0 0;
+  color: #94a3b8;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* Actions */
+
+.background-remover-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.background-remover-button {
+  min-width: 220px;
+  padding: 13px 24px;
+  border: 0;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.background-remover-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.background-remover-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Result Actions */
+
+.background-remover-result-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.background-remover-download,
+.background-remover-start-over {
+  min-width: 180px;
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.background-remover-download {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.background-remover-download:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.background-remover-start-over {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+}
+
+.background-remover-start-over:hover {
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+/* Privacy */
+
+.background-remover-privacy {
+  margin-top: 35px;
+}
+
+.background-remover-info-card {
+  padding: 22px;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  background: #eff6ff;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.background-remover-info-icon {
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+}
+
+.background-remover-info-card h3 {
+  margin: 0 0 7px;
+  color: #1e3a8a;
+  font-size: 1rem;
+}
+
+.background-remover-info-card p {
+  margin: 0 0 9px;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.background-remover-info-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Content */
+
+.background-remover-content-section {
+  margin-top: 85px;
+}
+
+.background-remover-content-header {
+  max-width: 720px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.background-remover-content-header > span {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #2563eb;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.background-remover-content-header h2 {
+  margin: 0 0 12px;
+  color: #111827;
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
+  font-weight: 800;
+}
+
+.background-remover-content-header p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Steps */
+
+.background-remover-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.background-remover-step {
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.background-remover-step-number {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 17px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.background-remover-step h3 {
+  margin: 0 0 9px;
+  color: #1e293b;
+  font-size: 1.05rem;
+}
+
+.background-remover-step p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* Articles */
+
+.background-remover-light-section {
+  margin-top: 55px;
+}
+
+.background-remover-article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.background-remover-article h2 {
+  margin: 0 0 18px;
+  color: #111827;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.background-remover-article p {
+  margin: 0 0 15px;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.background-remover-article p:last-child {
+  margin-bottom: 0;
+}
+
+.background-remover-article ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.background-remover-article li {
+  margin-bottom: 11px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.background-remover-article li:last-child {
+  margin-bottom: 0;
+}
+
+/* FAQ */
+
+.background-remover-faq {
+  max-width: 900px;
+  margin: 85px auto 0;
+}
+
+.background-remover-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.background-remover-faq-list details {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.background-remover-faq-list summary {
+  padding: 18px 20px;
+  padding-right: 45px;
+  color: #334155;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.background-remover-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.background-remover-faq-list summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2563eb;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.background-remover-faq-list details[open]
+  summary::after {
+  content: "−";
+}
+
+.background-remover-faq-list details p {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+  .background-remover-section {
+    padding-top: 105px;
+  }
+
+  .background-remover-tool {
+    padding: 22px;
+  }
+
+  .background-remover-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .background-remover-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .background-remover-preview,
+  .background-remover-result {
+    min-height: 330px;
+  }
+
+  .background-remover-empty,
+  .background-remover-progress {
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 767px) {
+  .background-remover-section {
+    padding: 95px 0 60px;
+  }
+
+  .background-remover-header {
+    margin-bottom: 30px;
+  }
+
+  .background-remover-header p {
+    font-size: 0.95rem;
+  }
+
+  .background-remover-tool {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .background-remover-upload {
+    min-height: 320px;
+    padding: 35px 18px;
+  }
+
+  .background-remover-upload-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .background-remover-panel-header {
+    padding: 13px 15px;
+  }
+
+  .background-remover-preview,
+  .background-remover-result {
+    min-height: 280px;
+    padding: 15px;
+  }
+
+  .background-remover-empty,
+  .background-remover-progress {
+    min-height: 280px;
+  }
+
+  .background-remover-info-card {
+    padding: 18px;
+  }
+
+  .background-remover-content-section {
+    margin-top: 60px;
+  }
+
+  .background-remover-light-section {
+    margin-top: 40px;
+  }
+
+  .background-remover-article {
+    padding: 24px 20px;
+  }
+
+  .background-remover-faq {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-remover-section {
+    padding-top: 85px;
+  }
+
+  .background-remover-header h1 {
+    font-size: 1.85rem;
+  }
+
+  .background-remover-upload {
+    min-height: 290px;
+  }
+
+  .background-remover-upload h2 {
+    font-size: 1.2rem;
+  }
+
+  .background-remover-upload p {
+    font-size: 0.88rem;
+  }
+
+  .background-remover-upload-note {
+    font-size: 0.75rem;
+  }
+
+  .background-remover-result-actions {
+    flex-direction: column;
+  }
+
+  .background-remover-download,
+  .background-remover-start-over,
+  .background-remover-button {
+    width: 100%;
+  }
+
+  .background-remover-info-card {
+    flex-direction: column;
+  }
+
+  .background-remover-article h2 {
+    font-size: 1.25rem;
+  }
+
+  .background-remover-faq-list summary {
+    padding: 16px 42px 16px 16px;
+    font-size: 0.9rem;
+  }
+
+  .background-remover-faq-list details p {
+    padding: 0 16px 17px;
+    font-size: 0.85rem;
+  }
+}

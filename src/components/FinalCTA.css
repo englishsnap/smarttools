@@ -1,0 +1,173 @@
+/* =========================================
+   FINAL CTA SECTION
+========================================= */
+
+.final-cta-section {
+  padding: 85px 20px;
+
+  background-color: #eef4ff;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.final-cta-content {
+  max-width: 750px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.final-cta-badge {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  padding: 6px 12px;
+
+  border-radius: 50px;
+
+  background-color: #ffffff;
+
+  color: #0d6efd;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.final-cta-content h2 {
+  margin-bottom: 15px;
+
+  color: #111827;
+
+  font-size: 2.4rem;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.final-cta-content p {
+  max-width: 600px;
+
+  margin: 0 auto 25px;
+
+  color: #5f6b7a;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.final-cta-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 22px;
+
+  border-radius: 8px;
+
+  background-color: #0d6efd;
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.final-cta-button:hover {
+  background-color: #0b5ed7;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 18px rgba(13, 110, 253, 0.2);
+}
+
+.final-cta-button span {
+  transition: transform 0.2s ease;
+}
+
+.final-cta-button:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .final-cta-section {
+    padding: 75px 20px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 2.1rem;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .final-cta-section {
+    padding: 60px 15px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .final-cta-content p {
+    font-size: 0.95rem;
+  }
+
+  .final-cta-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}

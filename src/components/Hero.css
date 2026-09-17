@@ -1,0 +1,418 @@
+/* =========================================
+   HERO SECTION
+========================================= */
+
+/* .home-hero {
+  padding: 90px 20px 75px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.home-badge {
+  display: inline-block;
+
+  margin-bottom: 18px;
+  padding: 7px 15px;
+
+  background-color: #e7f0ff;
+  color: #0d6efd;
+
+  border-radius: 50px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.home-hero h1 {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  color: #111827;
+
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-hero p {
+  max-width: 680px;
+
+  margin: 20px auto 0;
+
+  color: #6b7280;
+
+  font-size: 1.1rem;
+  line-height: 1.7;
+} */
+
+
+
+/* =========================================
+   TOOLS SECTION
+========================================= */
+
+.tools-section {
+  padding: 40px 20px;
+
+  background-color: #ffffff;
+
+}
+
+.tools-section h2 {
+  margin-bottom: 10px;
+
+  color: #111827;
+
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.tools-section > .container > .text-center p {
+
+  display: inline-block;
+
+  padding: 7px 15px;
+
+  background-color: #e7f0ff;
+  color: #0d6efd;
+
+  border-radius: 50px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+
+/* =========================================
+   TOOL FILTER
+========================================= */
+
+.tool-filter {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  padding: 9px 19px;
+
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+
+  background-color: #ffffff;
+  color: #495057;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.filter-button:hover {
+  border-color: #0d6efd;
+
+  color: #0d6efd;
+
+  transform: translateY(-1px);
+}
+
+.filter-button.active {
+  border-color: #0d6efd;
+
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+.filter-button.active:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TOOL CARD
+========================================= */
+
+.tool-card {
+  height: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #dee2e6;
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================================
+   TOOL IMAGE
+========================================= */
+
+
+.tool-image-container {
+  width: 100%;
+  height: 220px;
+
+  overflow: hidden;
+
+  background-color: #ecf4fc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool-image {
+  width: 100%;
+  height: 70%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+}
+
+/* =========================================
+   TOOL CARD CONTENT
+========================================= */
+
+.tool-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 24px;
+}
+
+.tool-title {
+  margin-bottom: 10px;
+
+  color: #111827;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.tool-description {
+  margin-bottom: 24px;
+
+  color: #6b7280;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   TOOL BUTTON
+========================================= */
+
+.tool-button {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 10px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #f1f5ff;
+  color: #0d6efd;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tool-button:hover {
+  background-color: #0d6efd;
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+.tool-button span {
+  margin-left: 6px;
+
+  transition: transform 0.2s ease;
+}
+
+.tool-button:hover span {
+  display: inline-block;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+
+  .tools-section {
+    padding: 65px 20px;
+  }
+
+  .tool-image-container {
+  
+    height: 260px;  
+
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .hero-page-design{
+    padding: 80px 20px;
+  }
+  
+   .hero-page-content h1 {
+        font-size: clamp(
+            40px,
+            11vw,
+            56px
+        );
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .hero-page-description {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+  .tools-section {
+    padding: 55px 15px;
+  }
+
+  .tools-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .tool-filter {
+    margin-top: 25px;
+
+    gap: 8px;
+  }
+
+  .filter-button {
+    padding: 8px 15px;
+
+    font-size: 0.9rem;
+  }
+
+  .tool-image-container {
+    height: 270px;  
+  }
+
+  .tool-card-content {
+    padding: 20px;
+  }
+
+  .tool-title {
+    font-size: 1.15rem;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+ .hero-page-design{
+    padding: 70px 16px;
+  }
+  
+  .hero-page-content h1 {
+       font-size: 40px;
+
+  }
+
+
+  .hero-page-description {
+        font-size: 14px;
+  }
+
+  .tool-filter {
+    gap: 7px;
+  }
+
+  .filter-button {
+    padding: 8px 13px;
+
+    font-size: 0.85rem;
+  }
+
+  .tool-image-container {
+    height: 220px;
+  }
+
+}
+
+
+@media(max-width: 320px) {
+  
+    .hero-page-content h1 {
+       font-size: 30px;
+
+  }
+}

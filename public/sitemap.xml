@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/merge-pdf</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/split-pdf</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/compress-pdf</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/pdf-to-word</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/pdf-to-excel</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/jpg-png-to-pdf</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/pdf-to-jpg-png</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/excel-to-pdf</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/image-to-text</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.com/background-remover</loc>
+  </url>
+
+</urlset>

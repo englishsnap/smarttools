@@ -1,0 +1,1001 @@
+/* =========================================
+   Compress PDF - Main Tool Section
+========================================= */
+
+.compress-pdf-section {
+  padding: 100px 0 60px;
+  background: #f8fafc;
+}
+
+.compress-pdf-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================
+   Header
+========================================= */
+
+.compress-pdf-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.compress-pdf-header h1 {
+  margin: 0 0 12px;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.compress-pdf-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+/* =========================================
+   Upload Area
+========================================= */
+
+.compress-pdf-upload {
+  max-width: 760px;
+  margin: 0 auto 25px;
+  padding: 50px 30px;
+  text-align: center;
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.compress-pdf-upload:hover {
+  border-color: #2563eb;
+  background: #f8fbff;
+}
+
+.compress-pdf-upload-active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  transform: scale(1.01);
+}
+
+.compress-pdf-upload-icon {
+  margin-bottom: 15px;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.compress-pdf-upload h2 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  font-weight: 650;
+  color: #1f2937;
+}
+
+.compress-pdf-upload p {
+  margin: 0 auto 20px;
+  max-width: 500px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.compress-pdf-upload-note {
+  display: block;
+  margin-top: 13px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* =========================================
+   Browse Button
+========================================= */
+
+.compress-pdf-browse-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.compress-pdf-browse-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.compress-pdf-browse-btn:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   Error
+========================================= */
+
+.compress-pdf-error {
+  max-width: 760px;
+  margin: 0 auto 20px;
+  padding: 14px 18px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+/* =========================================
+   Selected File
+========================================= */
+
+.compress-pdf-file {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 760px;
+  margin: 0 auto 25px;
+  padding: 18px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.compress-pdf-file-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #fee2e2;
+  font-size: 1.45rem;
+}
+
+.compress-pdf-file-info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.compress-pdf-file-info strong {
+  overflow-wrap: anywhere;
+  font-size: 0.98rem;
+  font-weight: 650;
+  color: #1f2937;
+}
+
+.compress-pdf-file-info span {
+  font-size: 0.86rem;
+  color: #64748b;
+}
+
+.compress-pdf-remove {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border: 0;
+  background: transparent;
+  color: #dc2626;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.compress-pdf-remove:hover {
+  color: #991b1b;
+}
+
+.compress-pdf-remove:focus-visible {
+  outline: 3px solid rgba(220, 38, 38, 0.2);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   Compression Options
+========================================= */
+
+.compress-pdf-options {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.compress-pdf-options h2 {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+  font-weight: 650;
+  color: #1f2937;
+}
+
+/* =========================================
+   Compression Levels
+========================================= */
+
+.compress-pdf-levels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.compress-pdf-level {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  min-height: 110px;
+  padding: 17px;
+  border: 2px solid #e2e8f0;
+  border-radius: 11px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.compress-pdf-level:hover:not(:disabled) {
+  border-color: #93c5fd;
+  background: #f8fbff;
+}
+
+.compress-pdf-level-active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+}
+
+.compress-pdf-level:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.compress-pdf-level-radio {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.compress-pdf-level-active .compress-pdf-level-radio {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.compress-pdf-level-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.compress-pdf-level-content strong {
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: #1f2937;
+}
+
+.compress-pdf-level-content small {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+/* =========================================
+   Compress Button
+========================================= */
+
+.compress-pdf-button {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.compress-pdf-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.compress-pdf-button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   Progress
+========================================= */
+
+.compress-pdf-progress {
+  margin-top: 25px;
+  padding: 20px;
+  border: 1px solid #dbeafe;
+  border-radius: 11px;
+  background: #eff6ff;
+}
+
+.compress-pdf-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+  color: #475569;
+}
+
+.compress-pdf-progress-header strong {
+  color: #2563eb;
+}
+
+.compress-pdf-progress-track {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #dbeafe;
+}
+
+.compress-pdf-progress-bar {
+  height: 100%;
+  border-radius: 20px;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.compress-pdf-progress p {
+  margin: 10px 0 0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+/* =========================================
+   Result
+========================================= */
+
+.compress-pdf-result {
+  max-width: 760px;
+  margin: 25px auto 0;
+  padding: 32px 25px;
+  border: 1px solid #bbf7d0;
+  border-radius: 15px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+.compress-pdf-success-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.compress-pdf-result h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #166534;
+}
+
+.compress-pdf-result > p {
+  max-width: 620px;
+  margin: 0 auto 25px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* =========================================
+   Statistics
+========================================= */
+
+.compress-pdf-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.compress-pdf-stats > div {
+  padding: 15px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.compress-pdf-stats span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.compress-pdf-stats strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.compress-pdf-saved {
+  margin: 15px 0 22px;
+  font-size: 0.92rem;
+  color: #166534;
+}
+
+.compress-pdf-saved strong {
+  font-weight: 700;
+}
+
+/* =========================================
+   Download Button
+========================================= */
+
+.compress-pdf-download {
+  display: block;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 13px 22px;
+  border: 0;
+  border-radius: 9px;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 0.96rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.compress-pdf-download:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+.compress-pdf-download:focus-visible {
+  outline: 3px solid rgba(22, 163, 74, 0.25);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   Start Over Button
+========================================= */
+
+.compress-pdf-start-over {
+  display: block;
+  margin: 14px auto 0;
+  padding: 8px 14px;
+  border: 0;
+  background: transparent;
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.compress-pdf-start-over:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.compress-pdf-start-over:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.2);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   Privacy Section
+========================================= */
+
+.compress-pdf-privacy {
+  padding: 35px 0;
+  background: #ffffff;
+}
+
+.compress-pdf-privacy .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.compress-pdf-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 22px 25px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #f8fbff;
+}
+
+.compress-pdf-info-icon {
+  flex-shrink: 0;
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.compress-pdf-info-card h2 {
+  margin: 0 0 7px;
+  font-size: 1.12rem;
+  font-weight: 650;
+  color: #1f2937;
+}
+
+.compress-pdf-info-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #64748b;
+}
+
+/* =========================================
+   General Content Sections
+========================================= */
+
+.compress-pdf-content-section {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.compress-pdf-content-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.compress-pdf-content-header {
+  max-width: 760px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.compress-pdf-content-header h2 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.compress-pdf-content-header p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+/* =========================================
+   Steps
+========================================= */
+
+.compress-pdf-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.compress-pdf-step {
+  padding: 25px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+}
+
+.compress-pdf-step > span {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.compress-pdf-step h3 {
+  margin: 0 0 9px;
+  font-size: 1.08rem;
+  font-weight: 650;
+  color: #1f2937;
+}
+
+.compress-pdf-step p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #64748b;
+}
+
+/* =========================================
+   Light Article Section
+========================================= */
+
+.compress-pdf-light-section {
+  background: #f8fafc;
+}
+
+/* =========================================
+   Article
+========================================= */
+
+.compress-pdf-article {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.compress-pdf-article h2 {
+  margin: 0 0 17px;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.compress-pdf-article h3 {
+  margin: 25px 0 10px;
+  font-size: 1.15rem;
+  font-weight: 650;
+  color: #334155;
+}
+
+.compress-pdf-article p {
+  margin: 0 0 15px;
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.compress-pdf-article ul {
+  margin: 15px 0 20px;
+  padding-left: 22px;
+}
+
+.compress-pdf-article li {
+  margin-bottom: 9px;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #4b5563;
+}
+
+.compress-pdf-article li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   FAQ
+========================================= */
+
+.compress-pdf-faq {
+  padding: 60px 0 70px;
+  background: #ffffff;
+}
+
+.compress-pdf-faq .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.compress-pdf-faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.compress-pdf-faq-list details {
+  margin-bottom: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.compress-pdf-faq-list details:last-child {
+  margin-bottom: 0;
+}
+
+.compress-pdf-faq-list summary {
+  position: relative;
+  padding: 17px 45px 17px 20px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.96rem;
+  font-weight: 650;
+  line-height: 1.5;
+  color: #1f2937;
+}
+
+.compress-pdf-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.compress-pdf-faq-list summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.compress-pdf-faq-list details[open] summary::after {
+  content: "−";
+}
+
+.compress-pdf-faq-list details p {
+  margin: 0;
+  padding: 0 20px 18px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+/* =========================================
+   Accessibility / Focus
+========================================= */
+
+.compress-pdf-level:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.22);
+  outline-offset: 2px;
+}
+
+.compress-pdf-faq-list summary:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.2);
+  outline-offset: -3px;
+}
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width: 991px) {
+  .compress-pdf-section {
+    padding-top: 90px;
+  }
+
+  .compress-pdf-levels {
+    grid-template-columns: 1fr;
+  }
+
+  .compress-pdf-level {
+    min-height: auto;
+  }
+
+  .compress-pdf-steps {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 767px) {
+  .compress-pdf-section {
+    padding: 80px 0 45px;
+  }
+
+  .compress-pdf-section .container,
+  .compress-pdf-privacy .container,
+  .compress-pdf-content-section .container,
+  .compress-pdf-faq .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .compress-pdf-header {
+    margin-bottom: 25px;
+  }
+
+  .compress-pdf-header h1 {
+    font-size: 2rem;
+  }
+
+  .compress-pdf-header p {
+    font-size: 0.94rem;
+  }
+
+  .compress-pdf-upload {
+    padding: 40px 20px;
+  }
+
+  .compress-pdf-file {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .compress-pdf-file-icon {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .compress-pdf-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .compress-pdf-content-section {
+    padding: 50px 0;
+  }
+
+  .compress-pdf-content-header h2 {
+    font-size: 1.55rem;
+  }
+
+  .compress-pdf-article h2 {
+    font-size: 1.5rem;
+  }
+
+  .compress-pdf-privacy {
+    padding: 30px 0;
+  }
+
+  .compress-pdf-info-card {
+    padding: 18px;
+  }
+
+  .compress-pdf-faq {
+    padding: 50px 0 60px;
+  }
+}
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width: 480px) {
+  .compress-pdf-section {
+    padding-top: 75px;
+  }
+
+  .compress-pdf-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .compress-pdf-upload {
+    padding: 32px 15px;
+  }
+
+  .compress-pdf-upload-icon {
+    font-size: 2.5rem;
+  }
+
+  .compress-pdf-upload h2 {
+    font-size: 1.2rem;
+  }
+
+  .compress-pdf-upload p {
+    font-size: 0.9rem;
+  }
+
+  .compress-pdf-file {
+    gap: 10px;
+  }
+
+  .compress-pdf-file-info strong {
+    font-size: 0.9rem;
+  }
+
+  .compress-pdf-remove {
+    padding: 5px;
+    font-size: 0.82rem;
+  }
+
+  .compress-pdf-level {
+    padding: 14px;
+  }
+
+  .compress-pdf-level-content small {
+    font-size: 0.78rem;
+  }
+
+  .compress-pdf-result {
+    padding: 27px 17px;
+  }
+
+  .compress-pdf-result h2 {
+    font-size: 1.35rem;
+  }
+
+  .compress-pdf-download {
+    font-size: 0.9rem;
+  }
+
+  .compress-pdf-info-card {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .compress-pdf-info-card h2 {
+    font-size: 1rem;
+  }
+
+  .compress-pdf-info-card p {
+    font-size: 0.85rem;
+  }
+
+  .compress-pdf-step {
+    padding: 22px 16px;
+  }
+
+  .compress-pdf-article p,
+  .compress-pdf-article li {
+    font-size: 0.91rem;
+  }
+
+  .compress-pdf-faq-list summary {
+    padding: 15px 40px 15px 16px;
+    font-size: 0.9rem;
+  }
+
+  .compress-pdf-faq-list summary::after {
+    right: 15px;
+  }
+
+  .compress-pdf-faq-list details p {
+    padding: 0 16px 16px;
+    font-size: 0.88rem;
+  }
+}

@@ -1,0 +1,773 @@
+/* =========================================
+   MERGE PDF PAGE
+========================================= */
+
+.merge-pdf-page {
+  min-height: 70vh;
+
+  padding: 70px 20px 90px;
+
+  background-color: #f8f9fa;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.merge-pdf-heading {
+  max-width: 750px;
+
+  margin: 0 auto 40px;
+}
+
+
+.merge-pdf-badge {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  padding: 6px 12px;
+
+  border-radius: 50px;
+
+  background-color: #e7f0ff;
+
+  color: #0d6efd;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+
+.merge-pdf-heading h1 {
+  margin-bottom: 15px;
+
+  color: #111827;
+
+  font-size: 2.5rem;
+
+  font-weight: 700;
+}
+
+
+.merge-pdf-heading p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   UPLOAD WRAPPER
+========================================= */
+
+.merge-pdf-upload-wrapper {
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   UPLOAD AREA
+========================================= */
+
+.merge-pdf-upload {
+  padding: 55px 25px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+
+  border: 2px dashed #cbd5e1;
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.merge-pdf-upload:hover {
+  border-color: #0d6efd;
+
+  background-color: #f8fbff;
+}
+
+
+.merge-pdf-upload.is-dragging {
+  border-color: #0d6efd;
+
+  background-color: #eef4ff;
+
+  transform: scale(1.01);
+}
+
+
+/* =========================================
+   UPLOAD ICON
+========================================= */
+
+.merge-pdf-upload-icon {
+  width: 65px;
+
+  height: 65px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background-color: #eef4ff;
+
+  font-size: 2rem;
+}
+
+
+/* =========================================
+   UPLOAD TEXT
+========================================= */
+
+.merge-pdf-upload h2 {
+  margin-bottom: 8px;
+
+  color: #111827;
+
+  font-size: 1.25rem;
+
+  font-weight: 700;
+}
+
+
+.merge-pdf-upload p {
+  margin-bottom: 20px;
+
+  color: #6b7280;
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   UPLOAD BUTTON
+========================================= */
+
+.merge-pdf-upload-button {
+  padding: 11px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color: #0d6efd;
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.merge-pdf-upload-button:hover {
+  background-color: #0b5ed7;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   FILE NOTE
+========================================= */
+
+.merge-pdf-file-note {
+  display: block;
+
+  margin-top: 15px;
+
+  color: #9ca3af;
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.merge-pdf-error {
+  max-width: 650px;
+
+  margin: 18px auto 0;
+
+  padding: 10px 14px;
+
+  border: 1px solid #f1b0b7;
+
+  border-radius: 8px;
+
+  background-color: #fff5f5;
+
+  color: #b02a37;
+
+  font-size: 0.85rem;
+
+  line-height: 1.5;
+
+  text-align: left;
+}
+
+
+/* =========================================
+   SELECTED FILES
+========================================= */
+
+.merge-pdf-files {
+  max-width: 850px;
+
+  margin: 35px auto 0;
+
+  padding: 25px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+}
+
+
+/* =========================================
+   FILE HEADER
+========================================= */
+
+.merge-pdf-files-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 5px;
+}
+
+
+.merge-pdf-files-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+}
+
+
+.merge-pdf-files-header span {
+  color: #6b7280;
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================================
+   FILE HEADER RIGHT SIDE
+========================================= */
+
+.merge-pdf-files-header-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+/* =========================================
+   REORDER NOTE
+========================================= */
+
+.merge-pdf-reorder-note {
+  margin: 0 0 15px;
+
+  color: #9ca3af;
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================================
+   FILE LIST
+========================================= */
+
+.merge-pdf-file-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+/* =========================================
+   FILE ITEM
+========================================= */
+
+.merge-pdf-file-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 15px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background-color: #f9fafb;
+
+  cursor: grab;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.merge-pdf-file-item:hover {
+  border-color: #cbd5e1;
+
+  background-color: #ffffff;
+}
+
+
+.merge-pdf-file-item:active {
+  cursor: grabbing;
+}
+
+
+/* =========================================
+   DRAGGING FILE
+========================================= */
+
+.merge-pdf-file-item.is-dragging {
+  opacity: 0.5;
+
+  border-color: #0d6efd;
+
+  background-color: #eef4ff;
+}
+
+
+/* =========================================
+   DRAG HANDLE
+========================================= */
+
+.merge-pdf-drag-handle {
+  flex-shrink: 0;
+
+  width: 24px;
+
+  color: #9ca3af;
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  letter-spacing: -3px;
+
+  cursor: grab;
+
+  user-select: none;
+}
+
+
+.merge-pdf-file-item:active
+.merge-pdf-drag-handle {
+  cursor: grabbing;
+}
+
+
+/* =========================================
+   FILE INFORMATION
+========================================= */
+
+.merge-pdf-file-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+/* =========================================
+   FILE ICON
+========================================= */
+
+.merge-pdf-file-icon {
+  flex-shrink: 0;
+
+  width: 40px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background-color: #eef4ff;
+
+  font-size: 1.2rem;
+}
+
+
+/* =========================================
+   FILE NAME
+========================================= */
+
+.merge-pdf-file-name {
+  max-width: 600px;
+
+  margin: 0 0 3px;
+
+  overflow: hidden;
+
+  color: #111827;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   FILE SIZE
+========================================= */
+
+.merge-pdf-file-size {
+  color: #9ca3af;
+
+  font-size: 0.75rem;
+}
+
+
+/* =========================================
+   REMOVE BUTTON
+========================================= */
+
+.merge-pdf-remove {
+  flex-shrink: 0;
+
+  width: 30px;
+
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background-color: #f1f3f5;
+
+  color: #6b7280;
+
+  font-size: 1.25rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.merge-pdf-remove:hover {
+  background-color: #e9ecef;
+
+  color: #dc3545;
+}
+
+
+/* =========================================
+   ACTION AREA
+========================================= */
+
+.merge-pdf-action {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   MERGE BUTTON
+========================================= */
+
+.merge-pdf-button {
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color: #0d6efd;
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.merge-pdf-button:hover:not(:disabled) {
+  background-color: #0b5ed7;
+
+  transform: translateY(-1px);
+}
+
+
+.merge-pdf-button:disabled {
+  background-color: #adb5bd;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   CLEAR ALL BUTTON
+========================================= */
+
+.merge-pdf-clear {
+  padding: 6px 12px;
+
+  border: 1px solid #dee2e6;
+
+  border-radius: 7px;
+
+  background-color: #ffffff;
+
+  color: #6c757d;
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.merge-pdf-clear:hover:not(:disabled) {
+  border-color: #dc3545;
+
+  background-color: #fff5f5;
+
+  color: #dc3545;
+}
+
+
+.merge-pdf-clear:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .merge-pdf-page {
+    padding-top: 60px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .merge-pdf-page {
+    padding: 55px 15px 70px;
+  }
+
+
+  .merge-pdf-heading h1 {
+    font-size: 2rem;
+  }
+
+
+  .merge-pdf-heading p {
+    font-size: 0.95rem;
+  }
+
+
+  .merge-pdf-upload {
+    padding: 45px 20px;
+  }
+
+
+  .merge-pdf-files {
+    padding: 20px 15px;
+  }
+
+
+  .merge-pdf-file-name {
+    max-width: 200px;
+  }
+
+
+  .merge-pdf-action {
+    justify-content: stretch;
+  }
+
+
+  .merge-pdf-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .merge-pdf-heading h1 {
+    font-size: 1.75rem;
+  }
+
+
+  .merge-pdf-upload {
+    padding: 40px 15px;
+  }
+
+
+  .merge-pdf-upload h2 {
+    font-size: 1.1rem;
+  }
+
+
+  .merge-pdf-files {
+    padding: 18px 12px;
+  }
+
+
+  .merge-pdf-file-item {
+    padding: 11px 10px;
+
+    gap: 8px;
+  }
+
+
+  .merge-pdf-drag-handle {
+    width: 20px;
+
+    font-size: 1rem;
+  }
+
+
+  .merge-pdf-file-info {
+    gap: 8px;
+  }
+
+
+  .merge-pdf-file-icon {
+    width: 35px;
+
+    height: 35px;
+
+    font-size: 1rem;
+  }
+
+
+  .merge-pdf-file-name {
+    max-width: 150px;
+
+    font-size: 0.82rem;
+  }
+
+
+  .merge-pdf-remove {
+    width: 28px;
+
+    height: 28px;
+  }
+
+   .merge-pdf-files-header {
+    align-items: flex-start;
+  }
+
+  .merge-pdf-files-header-right {
+    gap: 7px;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+  }
+
+}

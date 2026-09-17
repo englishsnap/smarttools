@@ -1,0 +1,943 @@
+/* =========================================
+   PDF TO WORD
+   Smart Tools
+   ========================================= */
+
+.pdf-to-word-section {
+  padding: 110px 20px 80px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.pdf-to-word-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.pdf-to-word-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.pdf-to-word-header h1 {
+  margin: 0 0 14px;
+  color: #172033;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.pdf-to-word-header p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   UPLOAD AREA
+   ========================================= */
+
+.pdf-to-word-upload {
+  padding: 55px 30px;
+  background: #ffffff;
+  border: 2px dashed #cbd5e1;
+  border-radius: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pdf-to-word-upload:hover {
+  background: #f8fbff;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.pdf-to-word-upload-active {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.pdf-to-word-upload-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: #eff6ff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 2rem;
+}
+
+.pdf-to-word-upload h3 {
+  margin: 0 0 8px;
+  color: #1e293b;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.pdf-to-word-upload p {
+  margin: 0 0 18px;
+  color: #64748b;
+}
+
+.pdf-to-word-browse-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 22px;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 9px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pdf-to-word-browse-btn:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.pdf-to-word-upload-note {
+  margin-top: 18px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   ERROR
+   ========================================= */
+
+.pdf-to-word-error {
+  margin-top: 18px;
+  padding: 14px 18px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  color: #b91c1c;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =========================================
+   SELECTED FILE
+   ========================================= */
+
+.pdf-to-word-file {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.pdf-to-word-file-icon {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  background: #fee2e2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc2626;
+  font-size: 1.45rem;
+}
+
+.pdf-to-word-file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.pdf-to-word-file-info strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #1e293b;
+  font-size: 0.98rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pdf-to-word-file-info span {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.pdf-to-word-remove {
+  padding: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #64748b;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pdf-to-word-remove:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================================
+   OPTIONS
+   ========================================= */
+
+.pdf-to-word-options {
+  margin-top: 25px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.pdf-to-word-options h3 {
+  margin: 0 0 8px;
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.pdf-to-word-options p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   CONVERT BUTTON
+   ========================================= */
+
+.pdf-to-word-convert {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px 25px;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pdf-to-word-convert:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.pdf-to-word-convert:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   PROGRESS
+   ========================================= */
+
+.pdf-to-word-progress {
+  margin-top: 25px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.pdf-to-word-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.pdf-to-word-progress-header strong {
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.pdf-to-word-progress-header span {
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.pdf-to-word-progress-track {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  background: #e2e8f0;
+  border-radius: 999px;
+}
+
+.pdf-to-word-progress-bar {
+  height: 100%;
+  background: #2563eb;
+  border-radius: inherit;
+  transition: width 0.25s ease;
+}
+
+/* =========================================
+   TEXT PREVIEW
+   ========================================= */
+
+.pdf-to-word-preview {
+  margin-top: 25px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.pdf-to-word-preview h3 {
+  margin: 0 0 15px;
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.pdf-to-word-preview-text {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.pdf-to-word-preview-text::-webkit-scrollbar {
+  width: 7px;
+}
+
+.pdf-to-word-preview-text::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.pdf-to-word-preview-text::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* =========================================
+   GENERATE WORD
+   ========================================= */
+
+.pdf-to-word-generate {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.pdf-to-word-generate-button {
+  min-width: 240px;
+  padding: 14px 25px;
+  background: #16a34a;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pdf-to-word-generate-button:hover:not(:disabled) {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+.pdf-to-word-generate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pdf-to-word-generating-message {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   DOWNLOAD RESULT
+   ========================================= */
+
+.pdf-to-word-download-box {
+  margin-top: 30px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.pdf-to-word-word-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  background: #dcfce7;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #16a34a;
+  font-size: 1.8rem;
+}
+
+.pdf-to-word-download-info {
+  margin-bottom: 20px;
+}
+
+.pdf-to-word-download-info strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #166534;
+  font-size: 1.05rem;
+}
+
+.pdf-to-word-download-info span {
+  display: block;
+  color: #64748b;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.pdf-to-word-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 230px;
+  padding: 13px 24px;
+  background: #16a34a;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  margin: 10px;
+}
+
+.pdf-to-word-download:hover {
+  background: #15803d;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.pdf-to-word-start-over {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pdf-to-word-start-over:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #1e293b;
+}
+
+/* =========================================
+   PRIVACY / INFORMATION CARD
+   ========================================= */
+
+.pdf-to-word-privacy {
+  margin-top: 45px;
+}
+
+.pdf-to-word-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 22px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+}
+
+.pdf-to-word-info-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  background: #dbeafe;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 1.2rem;
+}
+
+.pdf-to-word-info-card h3 {
+  margin: 0 0 6px;
+  color: #1e3a8a;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pdf-to-word-info-card p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* =========================================
+   GENERAL CONTENT SECTIONS
+   ========================================= */
+
+.pdf-to-word-content-section {
+  margin-top: 55px;
+}
+
+.pdf-to-word-content-header {
+  margin-bottom: 22px;
+}
+
+.pdf-to-word-content-header h2 {
+  margin: 0 0 10px;
+  color: #172033;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pdf-to-word-content-header p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* =========================================
+   HOW TO CONVERT — STEPS
+   ========================================= */
+
+.pdf-to-word-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pdf-to-word-step {
+  padding: 25px 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.pdf-to-word-step:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+}
+
+.pdf-to-word-step-number {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 15px;
+  background: #eff6ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.pdf-to-word-step h3 {
+  margin: 0 0 8px;
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pdf-to-word-step p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   LIGHT INFORMATION SECTION
+   ========================================= */
+
+.pdf-to-word-light-section {
+  padding: 28px;
+  background: #f1f5f9;
+  border-radius: 14px;
+}
+
+.pdf-to-word-light-section h2 {
+  margin: 0 0 15px;
+  color: #172033;
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.pdf-to-word-light-section p {
+  margin: 0 0 15px;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.pdf-to-word-light-section p:last-of-type {
+  margin-bottom: 0;
+}
+
+.pdf-to-word-light-section ul {
+  margin: 18px 0 0;
+  padding-left: 22px;
+  color: #475569;
+}
+
+.pdf-to-word-light-section li {
+  margin-bottom: 9px;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.pdf-to-word-light-section li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   ARTICLE / EXPLANATORY CONTENT
+   ========================================= */
+
+.pdf-to-word-article {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.pdf-to-word-article h2 {
+  margin: 0 0 15px;
+  color: #172033;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pdf-to-word-article h3 {
+  margin: 28px 0 10px;
+  color: #1e293b;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.pdf-to-word-article p {
+  margin: 0 0 15px;
+}
+
+.pdf-to-word-article p:last-child {
+  margin-bottom: 0;
+}
+
+.pdf-to-word-article ul,
+.pdf-to-word-article ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+.pdf-to-word-article li {
+  margin-bottom: 8px;
+}
+
+/* =========================================
+   FAQ
+   ========================================= */
+
+.pdf-to-word-faq {
+  margin-top: 55px;
+}
+
+.pdf-to-word-faq h2 {
+  margin: 0 0 20px;
+  color: #172033;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pdf-to-word-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pdf-to-word-faq-list details {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.pdf-to-word-faq-list details:hover {
+  border-color: #cbd5e1;
+}
+
+.pdf-to-word-faq-list details[open] {
+  border-color: #bfdbfe;
+}
+
+.pdf-to-word-faq-list summary {
+  position: relative;
+  padding: 17px 45px 17px 20px;
+  color: #1e293b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.pdf-to-word-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.pdf-to-word-faq-list summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.pdf-to-word-faq-list details[open] summary::after {
+  content: "−";
+}
+
+.pdf-to-word-faq-list details p {
+  margin: 0;
+  padding: 0 20px 18px;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 768px) {
+  .pdf-to-word-section {
+    padding: 95px 18px 65px;
+  }
+
+  .pdf-to-word-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .pdf-to-word-upload {
+    padding: 45px 22px;
+  }
+
+  .pdf-to-word-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-to-word-content-header h2,
+  .pdf-to-word-article h2,
+  .pdf-to-word-faq h2 {
+    font-size: 1.55rem;
+  }
+
+  .pdf-to-word-light-section {
+    padding: 24px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .pdf-to-word-section {
+    padding: 85px 14px 50px;
+  }
+
+  .pdf-to-word-header {
+    margin-bottom: 25px;
+  }
+
+  .pdf-to-word-header h1 {
+    font-size: 1.85rem;
+  }
+
+  .pdf-to-word-header p {
+    font-size: 0.95rem;
+  }
+
+  .pdf-to-word-upload {
+    padding: 35px 15px;
+    border-radius: 14px;
+  }
+
+  .pdf-to-word-upload-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.6rem;
+  }
+
+  .pdf-to-word-upload h3 {
+    font-size: 1.1rem;
+  }
+
+  .pdf-to-word-upload-note {
+    font-size: 0.8rem;
+  }
+
+  .pdf-to-word-file {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .pdf-to-word-file-icon {
+    width: 43px;
+    height: 43px;
+    flex-basis: 43px;
+    font-size: 1.2rem;
+  }
+
+  .pdf-to-word-file-info strong {
+    font-size: 0.9rem;
+  }
+
+  .pdf-to-word-file-info span {
+    font-size: 0.8rem;
+  }
+
+  .pdf-to-word-options,
+  .pdf-to-word-progress,
+  .pdf-to-word-preview {
+    padding: 18px;
+  }
+
+  .pdf-to-word-preview-text {
+    max-height: 240px;
+    padding: 14px;
+  }
+
+  .pdf-to-word-progress-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .pdf-to-word-generate-button,
+  .pdf-to-word-download {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .pdf-to-word-download-box {
+    padding: 24px 18px;
+  }
+
+  .pdf-to-word-info-card {
+    gap: 10px;
+    padding: 17px;
+  }
+
+  .pdf-to-word-info-icon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+    font-size: 1rem;
+  }
+
+  .pdf-to-word-info-card p {
+    font-size: 0.85rem;
+  }
+
+  .pdf-to-word-step {
+    padding: 20px 16px;
+  }
+
+  .pdf-to-word-light-section {
+    padding: 20px;
+  }
+
+  .pdf-to-word-light-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .pdf-to-word-light-section p,
+  .pdf-to-word-light-section li {
+    font-size: 0.9rem;
+  }
+
+  .pdf-to-word-article {
+    font-size: 0.9rem;
+  }
+
+  .pdf-to-word-article h2 {
+    font-size: 1.45rem;
+  }
+
+  .pdf-to-word-article h3 {
+    font-size: 1.1rem;
+  }
+
+  .pdf-to-word-faq h2 {
+    font-size: 1.45rem;
+  }
+
+  .pdf-to-word-faq-list summary {
+    padding: 15px 45px 15px 16px;
+    font-size: 0.9rem;
+  }
+
+  .pdf-to-word-faq-list summary::after {
+    right: 16px;
+  }
+
+  .pdf-to-word-faq-list details p {
+    padding: 0 16px 16px;
+    font-size: 0.85rem;
+  }
+
+  .pdf-to-word-start-over {
+    width: 100%;
+  }
+}

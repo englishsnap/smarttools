@@ -1,0 +1,904 @@
+/* =========================================
+   SPLIT PDF PAGE
+========================================= */
+
+.split-pdf-section {
+  min-height: 100vh;
+  padding: 120px 0 70px;
+  background-color: #f8fafc;
+}
+
+.split-pdf-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.split-pdf-header {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.split-pdf-header h1 {
+  margin: 0 0 12px;
+  color: #111827;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.split-pdf-header p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   UPLOAD AREA
+========================================= */
+
+.split-pdf-upload {
+  padding: 45px 30px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  background-color: #ffffff;
+  text-align: center;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.split-pdf-upload:hover {
+  border-color: #0d6efd;
+  background-color: #fbfdff;
+}
+
+.split-pdf-upload-active {
+  border-color: #0d6efd;
+  background-color: #eef5ff;
+  transform: translateY(-2px);
+}
+
+.split-pdf-upload-icon {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background-color: #eef4ff;
+  font-size: 1.8rem;
+}
+
+.split-pdf-upload h2 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.split-pdf-upload p {
+  margin: 0 auto 20px;
+  color: #6b7280;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.split-pdf-browse-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.split-pdf-browse-btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-1px);
+}
+
+.split-pdf-browse-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.split-pdf-upload-note {
+  display: block;
+  margin-top: 15px;
+  color: #9ca3af;
+  font-size: 0.75rem;
+}
+
+
+/* =========================================
+   READING / LOADING STATE
+========================================= */
+
+.split-pdf-reading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #dbeafe;
+  border-radius: 9px;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.85rem;
+}
+
+.split-pdf-reading p {
+  margin: 0;
+}
+
+.split-pdf-spinner,
+.split-pdf-button-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(13, 110, 253, 0.25);
+  border-top-color: #0d6efd;
+  border-radius: 50%;
+  animation: splitPdfSpin 0.8s linear infinite;
+}
+
+@keyframes splitPdfSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   GENERAL ERROR
+========================================= */
+
+.split-pdf-error {
+  margin-top: 20px;
+  padding: 12px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background-color: #fef2f2;
+  color: #b91c1c;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   SELECTED FILE
+========================================= */
+
+.split-pdf-file {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 25px;
+  padding: 14px 16px;
+  border: 1px solid #dbe3ed;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.split-pdf-file-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background-color: #eef4ff;
+  font-size: 1.15rem;
+}
+
+.split-pdf-file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.split-pdf-file-info strong {
+  display: block;
+  overflow: hidden;
+  color: #111827;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.split-pdf-file-info span {
+  display: block;
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.split-pdf-remove {
+  flex-shrink: 0;
+  padding: 7px 12px;
+  border: 1px solid #dc2626;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: #dc2626;
+  font-size: 0.77rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.split-pdf-remove:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.split-pdf-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   SPLIT OPTIONS
+========================================= */
+
+.split-pdf-options {
+  margin-top: 25px;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.split-pdf-options h2 {
+  margin: 0 0 20px;
+  color: #111827;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   RADIO OPTIONS
+========================================= */
+
+.split-pdf-option {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.split-pdf-option:hover {
+  border-color: #b8c7dc;
+  background-color: #fbfdff;
+}
+
+.split-pdf-option:last-of-type {
+  margin-bottom: 0;
+}
+
+.split-pdf-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.split-pdf-radio {
+  position: relative;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.split-pdf-option input:checked + .split-pdf-radio {
+  border-color: #0d6efd;
+}
+
+.split-pdf-option input:checked + .split-pdf-radio::after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  content: "";
+}
+
+.split-pdf-option:has(input:checked) {
+  border-color: #b8d2ff;
+  background-color: #f8fbff;
+}
+
+.split-pdf-option-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.split-pdf-option-content strong {
+  color: #111827;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.split-pdf-option-content small {
+  color: #6b7280;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+
+/* =========================================
+   INPUT WRAPPER
+========================================= */
+
+.split-pdf-input-wrapper {
+  margin: 5px 0 15px;
+  padding: 15px;
+  border-left: 3px solid #0d6efd;
+  border-radius: 0 8px 8px 0;
+  background-color: #f8fafc;
+}
+
+.split-pdf-input-wrapper label {
+  display: block;
+  margin-bottom: 7px;
+  color: #374151;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.split-pdf-input-wrapper input {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+  background-color: #ffffff;
+  color: #111827;
+  font-family: inherit;
+  font-size: 0.82rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.split-pdf-input-wrapper input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.split-pdf-input-wrapper input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.split-pdf-input-wrapper span {
+  display: block;
+  margin-top: 6px;
+  color: #9ca3af;
+  font-size: 0.72rem;
+}
+
+.split-pdf-input-wrapper span strong {
+  color: #6b7280;
+}
+
+
+/* =========================================
+   OPTIONS ERROR
+========================================= */
+
+.split-pdf-options-error {
+  margin-top: 15px;
+  padding: 10px 12px;
+  border: 1px solid #fecaca;
+  border-radius: 7px;
+  background-color: #fef2f2;
+  color: #b91c1c;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+
+/* =========================================
+   SPLIT BUTTON
+========================================= */
+
+.split-pdf-button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.split-pdf-button:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.18);
+}
+
+.split-pdf-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.split-pdf-button-spinner {
+  width: 15px;
+  height: 15px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.split-pdf-success {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+  padding: 13px 15px;
+  border: 1px solid #bbf7d0;
+  border-radius: 9px;
+  background-color: #f0fdf4;
+}
+
+.split-pdf-success-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #16a34a;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.split-pdf-success strong {
+  display: block;
+  color: #166534;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.split-pdf-success span {
+  display: block;
+  margin-top: 3px;
+  color: #4b7a5a;
+  font-size: 0.75rem;
+}
+
+
+/* =========================================
+   RESULTS
+========================================= */
+
+.split-pdf-results {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.split-pdf-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.split-pdf-results-header h2 {
+  margin: 0 0 5px;
+  color: #111827;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.split-pdf-results-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.82rem;
+}
+
+
+/* =========================================
+   DOWNLOAD ALL
+========================================= */
+
+.split-pdf-download-all {
+  flex-shrink: 0;
+  padding: 9px 15px;
+  border: none;
+  border-radius: 7px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.split-pdf-download-all:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   RESULTS LIST
+========================================= */
+
+.split-pdf-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.split-pdf-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  background-color: #f9fafb;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.split-pdf-result-item:hover {
+  border-color: #d1d5db;
+  background-color: #ffffff;
+}
+
+.split-pdf-result-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #eef4ff;
+  font-size: 1.1rem;
+}
+
+.split-pdf-result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.split-pdf-result-info strong {
+  display: block;
+  overflow: hidden;
+  color: #111827;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.split-pdf-result-info span {
+  display: block;
+  margin-top: 3px;
+  color: #9ca3af;
+  font-size: 0.75rem;
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.split-pdf-download {
+  flex-shrink: 0;
+  padding: 7px 12px;
+  border: 1px solid #0d6efd;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: #0d6efd;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.split-pdf-download:hover {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   SEO INFORMATION SECTION
+========================================= */
+
+.split-pdf-info {
+  margin-top: 60px;
+  padding: 45px 0 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.split-pdf-info-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.split-pdf-info h2 {
+  margin: 0 0 15px;
+  color: #111827;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.split-pdf-info h3 {
+  margin: 30px 0 10px;
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.split-pdf-info p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.split-pdf-info ol {
+  margin: 10px 0 0;
+  padding-left: 22px;
+  color: #6b7280;
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+.split-pdf-info li {
+  padding-left: 4px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 767px) {
+  .split-pdf-section {
+    padding: 100px 15px 55px;
+  }
+
+  .split-pdf-header {
+    margin-bottom: 28px;
+  }
+
+  .split-pdf-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .split-pdf-upload {
+    padding: 35px 20px;
+  }
+
+  .split-pdf-results-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .split-pdf-download-all {
+    width: 100%;
+  }
+
+  .split-pdf-result-item {
+    align-items: flex-start;
+  }
+
+  .split-pdf-download {
+    align-self: center;
+  }
+
+  .split-pdf-info {
+    margin-top: 45px;
+    padding-top: 35px;
+  }
+
+  .split-pdf-info h2 {
+    font-size: 1.25rem;
+  }
+
+  .split-pdf-info h3 {
+    margin-top: 25px;
+    font-size: 0.95rem;
+  }
+
+  .split-pdf-info p,
+  .split-pdf-info ol {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .split-pdf-section {
+    padding: 90px 12px 45px;
+  }
+
+  .split-pdf-header h1 {
+    font-size: 1.55rem;
+  }
+
+  .split-pdf-header p {
+    font-size: 0.83rem;
+  }
+
+  .split-pdf-upload {
+    padding: 30px 15px;
+  }
+
+  .split-pdf-upload-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+  }
+
+  .split-pdf-upload h2 {
+    font-size: 1rem;
+  }
+
+  .split-pdf-upload p {
+    font-size: 0.78rem;
+  }
+
+  .split-pdf-file {
+    gap: 9px;
+    padding: 11px;
+  }
+
+  .split-pdf-file-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .split-pdf-file-info strong {
+    font-size: 0.78rem;
+  }
+
+  .split-pdf-file-info span {
+    font-size: 0.69rem;
+  }
+
+  .split-pdf-remove {
+    padding: 6px 9px;
+    font-size: 0.7rem;
+  }
+
+  .split-pdf-options {
+    padding: 18px 15px;
+  }
+
+  .split-pdf-options h2 {
+    font-size: 0.95rem;
+  }
+
+  .split-pdf-option {
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .split-pdf-option-content strong {
+    font-size: 0.79rem;
+  }
+
+  .split-pdf-option-content small {
+    font-size: 0.7rem;
+  }
+
+  .split-pdf-success {
+    gap: 9px;
+    padding: 11px;
+  }
+
+  .split-pdf-success-icon {
+    width: 29px;
+    height: 29px;
+    font-size: 0.75rem;
+  }
+
+  .split-pdf-success strong {
+    font-size: 0.78rem;
+  }
+
+  .split-pdf-success span {
+    font-size: 0.68rem;
+  }
+
+  .split-pdf-result-item {
+    gap: 9px;
+    padding: 10px;
+  }
+
+  .split-pdf-result-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .split-pdf-result-info strong {
+    font-size: 0.78rem;
+  }
+
+  .split-pdf-result-info span {
+    font-size: 0.68rem;
+  }
+
+  .split-pdf-download {
+    padding: 6px 9px;
+    font-size: 0.72rem;
+  }
+}

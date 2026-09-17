@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* background-color: #f8f9fa; */
+}
+
+#root {
+  padding-top: 72px;
+}
+
+
+
+.hero-page-design{
+  
+  position: relative;
+
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 60px 0;
+
+  background:
+        linear-gradient(
+            135deg,
+            #f8fafc 0%,
+            #ffffff 55%,
+            #f1f5f9 100%
+        );
+
+    overflow: hidden;
+
+}
+
+.hero-page-design::before{
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -180px;
+  right: -120px;
+
+  border-radius: 50%;
+
+  background: rgba(249, 115, 22, 0.08);
+}
+
+.hero-page-design::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    bottom: -150px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, 0.06);
+}
+
+
+/* Content */
+
+.hero-page-content{
+  position: relative;
+
+  z-index: 1;
+
+  max-width: 880px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+}
+
+/* Eyebrow */
+
+.hero-page-content .section-eye-brow{
+  margin-bottom: 18px;
+  
+}
+
+.section-eye-brow{
+  display: inline-block;
+
+  margin-bottom: 18px;
+  padding: 7px 15px;
+
+  background-color: #e7f0ff;
+  color: #0d6efd;
+
+  border-radius: 50px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.hero-page-content h1{
+  margin: 0;
+  color: #0f172a;
+
+  font-size: clamp(
+        42px,
+        6vw,
+        72px
+    );
+  
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+
+
+.hero-page-content h1 span{
+  display: block;
+
+  color: #f97316;
+}
+
+
+.hero-page-description{
+  max-width: 500px;
+
+  margin: 28px auto 0;
+
+  color: #64748b;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
