@@ -21,8 +21,11 @@
 }
 
 
+.logo_img{
+  width: 80%;
+}
 
-.navbar-logo {
+/* .navbar-logo {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -61,7 +64,7 @@
 
 .logo-text {
   letter-spacing: -0.4px;
-}
+} */
 
 
 
