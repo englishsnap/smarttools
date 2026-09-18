@@ -56,10 +56,10 @@ const companyLinks = [
     name: "Contact",
     path: "/contact"
   },
-  // {
-  //   name: "Privacy Policy",
-  //   path: "/privacy-policy"
-  // },
+  {
+    name: "Privacy Policy",
+    path: "/privacy-policy"
+  },
   // {
   //   name: "Terms of Service",
   //   path: "/terms"

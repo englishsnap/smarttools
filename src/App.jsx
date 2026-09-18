@@ -16,6 +16,7 @@ import PDFToJPGPNG from "./components/PDFToJPGPNG"
 import ExcelToPDF from "./components/ExcelToPDF"
 import About from "./components/About"
 import Contact from "./components/Contact"
+import PrivacyPolicy from "./components/PrivacyPolicy"
 
 function App() {
   return (
@@ -79,6 +80,8 @@ function App() {
         <Route path="/about" element={<About />} />
 
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
       
