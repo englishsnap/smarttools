@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { PDFDocument } from "pdf-lib";
 import * as pdfjsLib from "pdfjs-dist/build/pdf.mjs";
+import { Helmet } from "react-helmet-async";
 import "./CompressPDF.css";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
@@ -637,6 +638,20 @@ function CompressPDF() {
 
   return (
     <>
+
+    <Helmet>
+        <title>Compress PDF Online Free | Smart Tools</title>
+        <meta
+          name="description"
+          content="Compress PDF files online for free. Reduce PDF file size while keeping documents easy to read and share."
+        />
+        <link
+          rel="canonical"
+          href="https://smartutility.pages.dev/compress-pdf"
+        />
+    </Helmet>
+
+
       <section className="compress-pdf-section">
         <div className="container">
           <div className="compress-pdf-header">
