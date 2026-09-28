@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { PDFDocument } from "pdf-lib";
+import { Helmet } from "react-helmet-async";
 import "./JPGPNGToPDF.css";
 
 const MAX_TOTAL_SIZE = 25 * 1024 * 1024;
@@ -825,6 +826,18 @@ const JPGPNGToPDF = () => {
     );
 
   return (
+    <>
+    <Helmet>
+  <title>Convert Image to PDF Online Free | Smart Utility</title>
+  <meta
+    name="description"
+    content="Convert JPG, PNG, and other images into a single PDF document for free. Easy image to PDF conversion in seconds."
+  />
+  <link
+    rel="canonical"
+    href="https://smartutility.pages.dev/image-to-pdf"
+  />
+</Helmet>
     <section className="jpg-png-to-pdf-section">
       <div className="jpg-png-to-pdf-container">
 
@@ -1628,6 +1641,9 @@ const JPGPNGToPDF = () => {
 
       </div>
     </section>
+
+
+    </>
   );
 };
 

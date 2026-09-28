@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createWorker } from "tesseract.js";
 import "./ImageToText.css";
+import { Helmet } from "react-helmet-async";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
 
@@ -434,6 +435,18 @@ const ImageToText = () => {
   ---------------------------------- */
 
   return (
+    <>
+    <Helmet>
+  <title>Extract Text from Image Online Free | Smart Utility</title>
+  <meta
+    name="description"
+    content="Extract text from images online for free using OCR technology. Convert JPG, PNG, and scanned photos into editable text instantly in your browser."
+  />
+  <link
+    rel="canonical"
+    href="https://smartutility.pages.dev/image-to-text"
+  />
+</Helmet>
     <main className="image-to-text-section">
       <div className="container">
 
@@ -1040,6 +1053,7 @@ const ImageToText = () => {
 
       </div>
     </main>
+    </>
   );
 };
 

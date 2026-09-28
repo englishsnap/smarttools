@@ -1,5 +1,6 @@
 import { useRef, useState } from "react"
 import { PDFDocument } from "pdf-lib"
+import { Helmet } from "react-helmet-async";
 import "./MergePDF.css"
 
 function MergePDF() {
@@ -551,7 +552,19 @@ function MergePDF() {
   // =========================================
 
   return (
-
+    <>
+      <Helmet>
+  <title>Merge PDF Online Free | Smart Utility</title>
+  <meta
+    name="description"
+    content="Combine multiple PDF files into one single document online for free. Fast, secure, and easy-to-use PDF merger tool."
+  />
+  <link
+    rel="canonical"
+    href="https://smartutility.pages.dev/merge-pdf"
+  />
+</Helmet>
+   
     <main className="merge-pdf-page">
 
       <div className="container">
@@ -893,7 +906,7 @@ function MergePDF() {
       </div>
 
     </main>
-
+         </>
   )
 
 }

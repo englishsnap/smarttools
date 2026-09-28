@@ -8,6 +8,7 @@ import {
 } from "docx";
 import * as pdfjsLib from "pdfjs-dist/build/pdf.mjs";
 import "./PDFToWord.css";
+import { Helmet } from "react-helmet-async";
 
 /* =========================================
    PDF.JS WORKER
@@ -771,6 +772,20 @@ const PDFToWord = () => {
      ========================================= */
 
   return (
+
+    <>
+    <Helmet>
+  <title>Convert PDF to Word Online Free | Smart Utility</title>
+  <meta
+    name="description"
+    content="Convert PDF documents into editable Microsoft Word files (DOCX) online for free. Fast, accurate, and secure conversion directly in your browser."
+  />
+  <link
+    rel="canonical"
+    href="https://smartutility.pages.dev/pdf-to-word"
+  />
+</Helmet>
+
     <section className="pdf-to-word-section">
       <div className="pdf-to-word-container">
 
@@ -1413,6 +1428,9 @@ const PDFToWord = () => {
 
       </div>
     </section>
+
+    
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import * as pdfjsLib from "pdfjs-dist/build/pdf.mjs";
+import { Helmet } from "react-helmet-async";
 import "./PDFToJPGPNG.css";
 
 /*
@@ -696,6 +697,19 @@ const PDFToJPGPNG = () => {
   };
 
   return (
+    <>
+      <Helmet>
+  <title>Convert PDF to JPG Online Free | Smart Utility</title>
+  <meta
+    name="description"
+    content="Convert PDF pages into high-quality JPG or PNG images online for free. Fast, private, and processes directly in your browser."
+  />
+  <link
+    rel="canonical"
+    href="https://smartutility.pages.dev/pdf-to-image"
+  />
+</Helmet>
+   
     <section className="pdf-to-jpg-png-section">
       <div className="container">
         {/* Header */}
@@ -1291,6 +1305,7 @@ const PDFToJPGPNG = () => {
         </section>
       </div>
     </section>
+     </>
   );
 };
 

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import * as pdfjsLib from "pdfjs-dist/build/pdf.mjs";
 import * as XLSX from "xlsx";
 import "./PDFToExcel.css";
+import { Helmet } from "react-helmet-async";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.mjs",
@@ -770,6 +771,21 @@ const PDFToExcel = () => {
     pageTables[previewPage];
 
   return (
+    <>
+    
+      <Helmet>
+  <title>Convert PDF to Excel Online Free | Smart Utility</title>
+  <meta
+    name="description"
+    content="Convert PDF tables and documents into editable Microsoft Excel spreadsheets (XLSX) online for free. Fast, accurate, and secure table extraction."
+  />
+  <link
+    rel="canonical"
+    href="https://smartutility.pages.dev/pdf-to-excel"
+  />
+</Helmet>
+    
+
     <section className="pdf-to-excel-section">
       <div className="pdf-to-excel-container">
 
@@ -1509,6 +1525,7 @@ const PDFToExcel = () => {
 
       </div>
     </section>
+        </>
   );
 };
 

@@ -3,6 +3,7 @@ import * as XLSX from "xlsx";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import "./ExcelToPDF.css";
+import { Helmet } from "react-helmet-async";
 
 const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25 MB
 const MAX_SHEETS = 20;
@@ -615,6 +616,19 @@ const ExcelToPDF = () => {
   };
 
   return (
+    <>
+    <Helmet>
+  <title>Convert Excel to PDF Online Free | Smart Utility</title>
+  <meta
+    name="description"
+    content="Convert Microsoft Excel spreadsheets (XLSX, XLS) into clean, professional PDF files online for free. Fast, secure, and preserves table formatting."
+  />
+  <link
+    rel="canonical"
+    href="https://smartutility.pages.dev/excel-to-pdf"
+  />
+</Helmet>
+
     <section className="excel-to-pdf-section">
       <div className="container">
 
@@ -1231,6 +1245,7 @@ const ExcelToPDF = () => {
 
       </div>
     </section>
+        </>
   );
 };
 

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { removeBackground as imglyRemoveBackground } from "@imgly/background-removal";
 import "./BackgroundRemover.css";
+import { Helmet } from "react-helmet-async";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
 
@@ -388,6 +389,21 @@ const BackgroundRemover = () => {
   };
 
   return (
+    <>
+    
+      <Helmet>
+  <title>Remove Image Background Online Free | Smart Utility</title>
+  <meta
+    name="description"
+    content="Remove image backgrounds automatically online for free. Create transparent background PNGs instantly directly in your browser."
+  />
+  <link
+    rel="canonical"
+    href="https://smartutility.pages.dev/background-remover"
+  />
+</Helmet>
+
+    
     <main className="background-remover-section">
       <div className="container">
 
@@ -980,6 +996,7 @@ const BackgroundRemover = () => {
 
       </div>
     </main>
+    </>
   );
 };
 

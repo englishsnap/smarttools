@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { PDFDocument } from "pdf-lib";
+import { Helmet } from "react-helmet-async";
 import "./SplitPDF.css";
 
 function SplitPDF() {
@@ -503,6 +504,20 @@ function SplitPDF() {
   ========================================= */
 
   return (
+    <>
+    
+    <Helmet>
+  <title>Split PDF Online Free | Smart Utility</title>
+  <meta
+    name="description"
+    content="Split specific pages or extract all pages from your PDF file online for free. Quick, secure, and browser-based PDF splitter."
+  />
+  <link
+    rel="canonical"
+    href="https://smartutility.pages.dev/split-pdf"
+  />
+</Helmet>
+  
     <section className="split-pdf-section">
       <div className="container">
 
@@ -998,6 +1013,7 @@ function SplitPDF() {
 
       </div>
     </section>
+      </>
   );
 }
 
