@@ -43,8 +43,7 @@ function Navbar() {
           className="navbar-logo"
           onClick={closeMenu}
         >
-          {/* <span className="logo-icon">ST</span> */}
-          {/* <span className="logo-text">Smart Tools</span> */}
+   
           <img src="./assets/logo_svg.svg" className="logo_img"/>
         </NavLink>
 
